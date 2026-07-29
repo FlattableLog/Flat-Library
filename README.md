@@ -91,7 +91,7 @@ git clone https://github.com/FlattableLog/Flat-Library.git
 ```
 
 ### 2. Move Project
-</> Markdown
+
 Move the cloned project into your XAMPP `htdocs` directory:
 
 ### 3. Import Database
@@ -112,7 +112,7 @@ database/perpustakaan.sql
 
 ### 4. Configure Database
 
-</> Markdown
+
 Open phpMyAdmin and create a new database named:
 
 ```php

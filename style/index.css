@@ -1,0 +1,325 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 4.7rem;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+.hero .content h1 span {
+  font-size: 5.5rem;
+  font-variant: small-caps;
+}
+.hero .content h1 span .sc {
+  color: var(--primary);
+}
+.hero .content p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 200;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  text-align: justify;
+}
+.hero .content a {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  background-color: var(--secondary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.hero .content a:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.katalog-buku {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem 5%;
+}
+.katalog-buku .kartu-buku {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.katalog-buku .kartu-buku:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+.katalog-buku .kategori-buku {
+  background-color: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 12px 12px 12px 0;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-bottom: -5px;
+}
+.katalog-buku .cover-buku {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.katalog-buku .cover-buku img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: clip-path 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.4s ease;
+}
+.katalog-buku .cover-buku img:nth-child(1) {
+  filter: brightness(0.8) grayscale(1);
+}
+.katalog-buku .cover-buku img:nth-child(2) {
+  clip-path: inset(100% 0 0 0);
+}
+.katalog-buku .kartu-buku:hover .cover-buku img:nth-child(1) {
+  transform: scale(1);
+}
+.katalog-buku .kartu-buku:hover .cover-buku img:nth-child(2) {
+  clip-path: inset(0 0 0 0);
+}
+.katalog-buku .info-buku {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+.katalog-buku .info-buku .judul-buku {
+  font-size: 1.15rem;
+  color: var(--secondary);
+  line-height: 1.3;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.katalog-buku .info-buku .penulis-buku {
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+}
+.katalog-buku .info-buku .genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.katalog-buku .info-buku .genre-list .gelembung {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 4px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.katalog-buku .btn-detail {
+  margin-top: auto;
+  background-color: var(--secondary);
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2;
+}
+.katalog-buku .btn-detail:hover {
+  background-color: var(--primary);
+}
+
+.latar-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3 ease;
+}
+.latar-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+.latar-modal.show .modal-content {
+  transform: translateY(0) scale(1);
+}
+.latar-modal .modal-content {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.latar-modal .modal-content::-webkit-scrollbar {
+  display: none;
+}
+.latar-modal .modal-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.latar-modal .modal-content .cls-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--secondary-dark);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.latar-modal .modal-content .cls-btn:hover {
+  color: red;
+}
+.latar-modal .modal-content .modal-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.latar-modal .modal-content .modal-layout .modal-cover {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.latar-modal .modal-content .modal-layout .modal-cover img {
+  width: 100%;
+  display: block;
+}
+.latar-modal .modal-content .modal-layout .modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.latar-modal .modal-content .modal-layout .modal-info h2 {
+  font-size: 2rem;
+  color: var(--secondary);
+  line-height: 1.2;
+}
+.latar-modal .modal-content .modal-layout .modal-info .nama-penulis {
+  font-size: 1.1rem;
+  color: black;
+  margin-top: -8px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .genre-list strong {
+  font-size: 1.1rem;
+}
+.latar-modal .modal-content .modal-layout .modal-info .genre-list .gelembung {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 4px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.latar-modal .modal-content .modal-layout .modal-info .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background-color: var(--primary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 10px 0;
+}
+.latar-modal .modal-content .modal-layout .modal-info .info-grid .info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .info-grid .info-item span {
+  font-size: 0.9rem;
+  color: var(--secondary-dark);
+}
+.latar-modal .modal-content .modal-layout .modal-info .info-grid .info-item strong {
+  font-size: 1.1rem;
+  color: var(--secondary);
+}
+.latar-modal .modal-content .modal-layout .modal-info .sipnosis-box h3 {
+  font-size: 1.3 rem;
+  color: var(--secondary-dark);
+}
+.latar-modal .modal-content .modal-layout .modal-info .sipnosis-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 10px;
+  text-align: justify;
+}
+.latar-modal .modal-content .modal-layout .modal-info .sipnosis-box p::-webkit-scrollbar {
+  width: 6px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .sipnosis-box p::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .sipnosis-box p::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}
+.latar-modal .modal-content .modal-layout .modal-info .btn-baca {
+  margin-top: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+.latar-modal .modal-content .modal-layout .modal-info .btn-baca:hover {
+  background-color: var(--primary);
+  color: var(--secondary-dark);
+}/*# sourceMappingURL=index.css.map */

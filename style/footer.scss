@@ -1,0 +1,43 @@
+footer{
+    color: #fff;
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 2rem;
+    margin-top: 3rem;
+
+    .footer-top{
+        h2{
+
+            font-variant: small-caps;
+    
+            span{
+                color: black;
+            }
+        }
+    }
+
+    .medsos {
+        padding: 1rem 0;
+
+        a{
+            color: #fff;
+            margin: 1rem;
+
+            &:hover{
+                color: var(--secondary);
+            }
+        }
+    }
+
+    .credit{
+        font-size: 0.9rem;
+
+        a{
+            color: var(--secondary);
+
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}

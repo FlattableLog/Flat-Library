@@ -1,0 +1,204 @@
+.halaman-admin {
+  min-height: 100vh;
+  padding: 7rem 5%;
+}
+.halaman-admin .table-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(191, 255, 0, 0.5);
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.halaman-admin .table-container .table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.halaman-admin .table-container .table-header h2 {
+  color: var(--secondary-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.halaman-admin .table-container .table-header .btn-tambah {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--secondary);
+  border: 1px solid var(--secondary-dark);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.halaman-admin .table-container .table-header .btn-tambah:hover {
+  background-color: var(--secondary-dark);
+  color: #fff;
+}
+.halaman-admin .table-container .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+.halaman-admin .table-container .table-responsive .table-main {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.halaman-admin .table-container .table-responsive .table-main thead th {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 2px solid #f3f4f6;
+  white-space: nowrap;
+}
+.halaman-admin .table-container .table-responsive .table-main tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: var(--secondary-dark);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+.halaman-admin .table-container .table-responsive .table-main tbody tr {
+  transition: background-color 0.2s ease;
+}
+.halaman-admin .table-container .table-responsive .table-main tbody tr:hover {
+  background-color: rgba(191, 255, 0, 0.3);
+  color: black;
+  font-weight: 700;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-cover img {
+  width: 51px;
+  height: 68px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #e5e7eb;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-info .judul {
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: black;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-info .penulis {
+  color: var(--secondary);
+}
+.halaman-admin .table-container .table-responsive .table-main .col-genre .bungkus-genre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: 200px;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-genre .badge-genre {
+  padding: 4px 8px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-genre .badge-genre:nth-child(odd) {
+  background-color: #e0e7ff;
+  color: var(--secondary-dark);
+}
+.halaman-admin .table-container .table-responsive .table-main .col-genre .badge-genre:nth-child(even) {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol .btn-kurang, .halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol .btn-tambah {
+  background-color: #ffffff;
+  color: var(--secondary-dark);
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol .btn-kurang:hover, .halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol .btn-tambah:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+.halaman-admin .table-container .table-responsive .table-main .col-stok .stok-kontrol .angka {
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 20px;
+  text-align: center;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-edit, .halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-hapus {
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  text-align: center;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-edit {
+  color: #ffffff;
+  background-color: rgba(0, 0, 255, 0.5);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-edit:hover {
+  background-color: rgb(0, 0, 255);
+  transform: scale(1.1);
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-hapus {
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.halaman-admin .table-container .table-responsive .table-main .col-aksi .btn-hapus:hover {
+  background-color: rgb(255, 0, 0);
+  font-weight: 800;
+  transform: scale(1.1);
+}
+.halaman-admin .table-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2.5rem;
+}
+.halaman-admin .table-container .pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #f3f4f6;
+  color: var(--secondary-dark);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.halaman-admin .table-container .pagination a:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+}
+.halaman-admin .table-container .pagination a.aktif {
+  background-color: var(--primary);
+  color: var(--secondary-dark);
+  box-shadow: 0 4px 16px rgba(191, 255, 0, 0.4);
+  pointer-events: none;
+}/*# sourceMappingURL=daftarBuku.css.map */

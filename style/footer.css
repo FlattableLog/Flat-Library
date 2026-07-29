@@ -1,0 +1,32 @@
+footer {
+  color: #fff;
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+footer .footer-top h2 {
+  font-variant: small-caps;
+}
+footer .footer-top h2 span {
+  color: black;
+}
+footer .medsos {
+  padding: 1rem 0;
+}
+footer .medsos a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .medsos a:hover {
+  color: var(--secondary);
+}
+footer .credit {
+  font-size: 0.9rem;
+}
+footer .credit a {
+  color: var(--secondary);
+}
+footer .credit a:hover {
+  color: #fff;
+}/*# sourceMappingURL=footer.css.map */

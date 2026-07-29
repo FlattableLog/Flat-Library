@@ -1,0 +1,99 @@
+:root{
+    --primary: #FFC107;
+    --secondary: #0D47A1;
+    --secondary-dark: #08306B;
+    --bg: #F5F7FA;
+    --card: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(8, 55, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .search-form {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   margin: 0 2rem;
+   background: #fff;
+   border-radius: 999px;
+   overflow: hidden;
+   max-width: 700px;
+}
+
+.navbar .search-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+}
+
+.navbar .search-form label {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a:after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5 rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}

@@ -137,30 +137,33 @@ http://localhost/perpustakaan
 ## 📸 Screenshots
 
 ### Home Page
-Main page displaying the latest book collection and quick navigation.
+The main dashboard displaying featured books, quick navigation, and access to the digital library.
 
 ![Home](screenshots/home1.png)
+
+preview book recently added.
 ![Home](screenshots/home2.png)
 
 ### Book Detail
-Displays complete information about the selected book.
-
+Shows detailed information about the selected book, including cover image, synopsis, category, genre, stock, and other metadata before reading or downloading.
 ![Detail](screenshots/detailBuku.png)
 
 ### Book List
+Displays all available books in a clean list view. Users can browse, search, and select books to view more details.
 
 ![List](screenshots/daftarBuku.png)
 
 ### Add Book
+Provides an administration form to add new books by uploading cover images, PDF files, and complete book information.
 
 ![Add](screenshots/tambahBuku.png)
 
 ### Edit book
-
+Allows administrators to update book information, replace book covers, update PDF files, and modify metadata efficiently.
 ![Edit](screenshots/editBuku.png)
 
 ### PDF Reader
-
+Integrated PDF reader that enables users to read books directly from the browser without downloading the file.
 ![Reader](screenshots/PDFreader.png)
 
 

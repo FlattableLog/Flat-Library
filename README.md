@@ -184,9 +184,6 @@ Integrated PDF reader that enables users to read books directly from the browser
 
 **Ahmad Hendra Adikurnia**
 
-GitHub
-https://github.com/FlattableLog
-
 📷 Instagram: [@ahmdhndra__](https://instagram.com/ahmdhndra__)
 
 ---
